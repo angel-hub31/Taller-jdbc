@@ -20,8 +20,6 @@ public class DeleteVehiculo {
 			String sql="DELETE FROM Vehiculos WHERE placa=?";
 			
 			ps=con.prepareStatement(sql);
-			
-			ps=con.prepareStatement(sql);
 			ps.setString(1, "PBN789");
 			
 			int filas=ps.executeUpdate();
@@ -30,7 +28,7 @@ public class DeleteVehiculo {
 			
 			
 		}catch(Exception e) {
-			log.info("error al eliminar filas:" + e.getMessage());
+			log.error("error al eliminar filas:" + e.getMessage());
 
 			
 		}finally {

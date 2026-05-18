@@ -19,7 +19,7 @@ public class InsertarVehiculo {
 		// realizamos conexion co la base de datos, lo inicializamos con null
 		Connection con =null;
 		//representa una sentencia sql preparada
-		PreparedStatement ps;
+		PreparedStatement ps=null;
 		
 		//sentencias SQL
 		String sql=""" 
@@ -29,11 +29,10 @@ public class InsertarVehiculo {
 				""";
 		
 		try {
-			con=DriverManager.getConnection(URL,USER,PASSWORD);
-			
+			con = Conexion.getConnection();
 			ps=con.prepareStatement(sql);
 			//seteamos la primera columna, en este caso es la columna placa
-			ps.setString(1, "PBN785");
+			ps.setString(1, "PUB715");
 			//seteamos la segunda columna, en este caso es la columna marca
 			ps.setString(2, "Chevrolet");
 			//seteamos la tercera columna, en este caso es la columna modelo
@@ -63,10 +62,15 @@ public class InsertarVehiculo {
 			
 		}finally {
 			try {
-				con.close();
+				if (ps != null) {
+					ps.close();
+				}
+				if (con != null) {
+					con.close();
+				}
+				
 			} catch (SQLException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
+				log.error("Error al cerrar los recursos: " + e.getMessage());
 			}
 		}
 		
