@@ -23,10 +23,22 @@ public class UpdateVehiculo {
 					UPDATE Vehiculo SET marca=?,modelo=?,anio=?,precio=?,color=?,disponible=?
 					WHERE placa=?
 					""";
+			ps=con.prepareStatement(sql);
 			
+			ps.setString(1, "Ford");
+			ps.setString(2, "Xplorer");
+			ps.setInt(3, 2021);
+			ps.setDouble(4, 30000);
+			ps.setString(5, "Negro");
+			ps.setBoolean(6, true);
+			ps.setString(7, "PSG-123");
 			
+			int fila=ps.executeUpdate();
+			log.info("filas afectadas: " + fila);
 			//capturamos exepciones
 		}catch(Exception e){
+			log.error("Error al actualizar: " +e.getMessage());
+			
 			
 		}
 
