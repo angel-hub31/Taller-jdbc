@@ -33,17 +33,17 @@ public class InsertarVehiculo {
 			
 			ps=con.prepareStatement(sql);
 			//seteamos la primera columna, en este caso es la columna placa
-			ps.setString(1, "PSG-123");
+			ps.setString(1, "PTC456");
 			//seteamos la segunda columna, en este caso es la columna marca
-			ps.setString(2, "Chevrolet");
+			ps.setString(2, "Nissan");
 			//seteamos la tercera columna, en este caso es la columna modelo
-			ps.setString(3, "Sail");
+			ps.setString(3, "Xtrail");
 			//seteamos la cuarta columna, en este caso es la columna anio
-			ps.setInt(4, 2020);
+			ps.setInt(4, 2026);
 			//seteamos la quinta columna, en este caso es la columna precio
-			ps.setDouble(5, 15000);
+			ps.setDouble(5, 20000);
 			//seteamos la sexta columna, en este caso es la columna color
-			ps.setString(6, "Blanco");
+			ps.setString(6, "Negro");
 			//seteamos la septima columna, en este caso es la columna disponible
 			ps.setBoolean(7, true);
 			
