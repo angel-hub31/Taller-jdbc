@@ -23,7 +23,7 @@ public class ConexionPostgres {
 			
 		}catch(SQLException e) {
 			
-			log.error("error de conexion: " + e.getMessage());
+			log.error("¡¡¡Error de conexion!!! " + e.getMessage());
 			
 			//cerramos la conexion
 		}finally {
