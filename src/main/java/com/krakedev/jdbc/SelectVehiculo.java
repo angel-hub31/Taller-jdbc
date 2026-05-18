@@ -36,12 +36,13 @@ public class SelectVehiculo {
 				String placa = rs.getString("placa");
 				String marca = rs.getString("marca");
 				String modelo = rs.getString("modelo");
-				int anio=rs.getInt("anio");
-				double precio=rs.getDouble("precio");
+				int anio = rs.getInt("anio");
+				double precio = rs.getDouble("precio");
 				String color = rs.getString("color");
-				boolean disponible=rs.getBoolean("disponible");
+				boolean disponible = rs.getBoolean("disponible");
 
-
+				log.info("Vehiculo: Placa: " + placa + " Marca: " + marca + " Modelo: " + modelo + " Anio: " + anio
+						+ " Precio: " + precio + " Color: " + color + " Disponible: " + disponible);
 
 			}
 
