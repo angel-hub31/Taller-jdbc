@@ -26,15 +26,16 @@ public class UpdateVehiculo {
 					""";
 			ps=con.prepareStatement(sql);
 			
-			ps.setString(1, "Ford");
-			ps.setString(2, "Xplorer");
+			ps.setString(1, "Kia");
+			ps.setString(2, "Cerato");
 			ps.setInt(3, 2021);
-			ps.setDouble(4, 30000);
-			ps.setString(5, "Negro");
+			ps.setDouble(4, 16000);
+			ps.setString(5, "Blanco");
 			ps.setBoolean(6, true);
-			ps.setString(7, "PSG-123");
+			ps.setString(7, "HCG456");
 			
 			int fila=ps.executeUpdate();
+			log.info("-----Vehiculo actualizado-----");
 			log.info("filas afectadas: " + fila);
 			//capturamos exepciones
 		}catch(Exception e){
