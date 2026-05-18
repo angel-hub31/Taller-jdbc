@@ -45,10 +45,15 @@ public class UpdateVehiculo {
 			
 		}finally {
 			try {
-				con.close();
+				if (ps != null) {
+					ps.close();
+				}
+				if (con != null) {
+					con.close();
+				}
+				
 			} catch (SQLException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
+				log.error("Error al cerrar los recursos: " + e.getMessage());
 			}
 		}
 

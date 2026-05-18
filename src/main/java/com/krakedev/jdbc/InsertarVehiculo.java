@@ -32,7 +32,7 @@ public class InsertarVehiculo {
 			con = Conexion.getConnection();
 			ps=con.prepareStatement(sql);
 			//seteamos la primera columna, en este caso es la columna placa
-			ps.setString(1, "PUB715");
+			ps.setString(1, "PUB75");
 			//seteamos la segunda columna, en este caso es la columna marca
 			ps.setString(2, "Chevrolet");
 			//seteamos la tercera columna, en este caso es la columna modelo
