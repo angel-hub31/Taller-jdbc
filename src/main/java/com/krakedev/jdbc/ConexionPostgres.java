@@ -4,11 +4,13 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+
 
 public class ConexionPostgres {
-	private static final Logger log = LogManager.getLogger(ConexionPostgres.class);
+	private static final Logger log = LoggerFactory.getLogger(ConexionPostgres.class);
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
