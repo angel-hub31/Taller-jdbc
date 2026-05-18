@@ -9,3 +9,6 @@ color varchar (30),
 disponible boolean not null
 
 );
+select * from vehiculos;
+
+alter table vehiculos add kilometraje int;
