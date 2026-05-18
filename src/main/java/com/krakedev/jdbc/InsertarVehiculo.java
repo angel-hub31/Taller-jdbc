@@ -49,17 +49,21 @@ public class InsertarVehiculo {
 			
 			//devuelve las filas afectadas filas fueron afectadas
 			
-
-
-
-
+			int filas=ps.executeUpdate();
 			
-
-			
-			
+			log.info("conexion exitosa");
+			log.info("Filas insertadas: "+ filas);
 			
 		}catch(SQLException e) {
+			log.error("error en la conexion: " + e.getMessage());
 			
+		}finally {
+			try {
+				con.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
 		
 		
