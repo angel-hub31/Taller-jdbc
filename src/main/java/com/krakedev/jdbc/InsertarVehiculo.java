@@ -45,7 +45,7 @@ public class InsertarVehiculo {
 			//seteamos la sexta columna, en este caso es la columna color
 			ps.setString(6, "Blanco");
 			//seteamos la septima columna, en este caso es la columna disponible
-			ps.setBoolean(6, true);
+			ps.setBoolean(7, true);
 			
 			//devuelve las filas afectadas filas fueron afectadas
 			
