@@ -3,6 +3,7 @@ package com.krakedev.jdbc;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -47,7 +48,15 @@ public class SelectVehiculo {
 			}
 
 		} catch (Exception e) {
+			log.error("error al traer datos",e.getMessage());
 
+		}finally {
+			try {
+				con.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
 
 	}
