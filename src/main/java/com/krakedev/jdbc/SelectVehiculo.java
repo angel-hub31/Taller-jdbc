@@ -40,6 +40,8 @@ public class SelectVehiculo {
 				double precio = rs.getDouble("precio");
 				String color = rs.getString("color");
 				boolean disponible = rs.getBoolean("disponible");
+				
+				log.info("");
 
 				log.info("Vehiculo: Placa: " + placa + " Marca: " + marca + " Modelo: " + modelo + " Anio: " + anio
 						+ " Precio: " + precio + " Color: " + color + " Disponible: " + disponible);
