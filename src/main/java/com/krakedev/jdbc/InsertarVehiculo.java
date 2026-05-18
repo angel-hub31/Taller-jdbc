@@ -24,8 +24,8 @@ public class InsertarVehiculo {
 		//sentencias SQL
 		String sql=""" 
 				
-				INSERT INTO vehiculos(placa, marca, modelo, anio, precio, color, disponible)
-				VALUES (?,?,?,?,?,?,?)
+				INSERT INTO vehiculos(placa, marca, modelo, anio, precio, color, kilometraje, disponible)
+				VALUES (?,?,?,?,?,?,?,?)
 				""";
 		
 		try {
@@ -33,19 +33,21 @@ public class InsertarVehiculo {
 			
 			ps=con.prepareStatement(sql);
 			//seteamos la primera columna, en este caso es la columna placa
-			ps.setString(1, "PCI456");
+			ps.setString(1, "PBN789");
 			//seteamos la segunda columna, en este caso es la columna marca
 			ps.setString(2, "Chevrolet");
 			//seteamos la tercera columna, en este caso es la columna modelo
-			ps.setString(3, "Captiva");
+			ps.setString(3, "Onix");
 			//seteamos la cuarta columna, en este caso es la columna anio
-			ps.setInt(4, 2026);
+			ps.setInt(4, 2024);
 			//seteamos la quinta columna, en este caso es la columna precio
 			ps.setDouble(5, 18000);
 			//seteamos la sexta columna, en este caso es la columna color
-			ps.setString(6, "Rojo");
-			//seteamos la septima columna, en este caso es la columna disponible
-			ps.setBoolean(7, true);
+			ps.setString(6, "Blanco");
+			//seteamos la septima columna, en este caso es la columna kilometraje
+			ps.setInt(7, 300);
+			//seteamos la octava columna, en este caso es la columna disponible
+			ps.setBoolean(8, true);
 			
 			//devuelve las filas afectadas filas fueron afectadas
 			
