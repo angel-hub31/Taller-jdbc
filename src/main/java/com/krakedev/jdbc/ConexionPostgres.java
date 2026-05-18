@@ -19,7 +19,7 @@ public class ConexionPostgres {
 		
 		try {
 			con =DriverManager.getConnection("jdbc:postgresql://localhost:5432/tallerjdbc","postgres","1004034391");
-			log.info("conexion exitosa");
+			log.info("¡¡¡Conexion exitosa!!!");
 			
 		}catch(SQLException e) {
 			

@@ -33,17 +33,17 @@ public class InsertarVehiculo {
 			
 			ps=con.prepareStatement(sql);
 			//seteamos la primera columna, en este caso es la columna placa
-			ps.setString(1, "PTC456");
+			ps.setString(1, "HCG456");
 			//seteamos la segunda columna, en este caso es la columna marca
-			ps.setString(2, "Nissan");
+			ps.setString(2, "Hyundai");
 			//seteamos la tercera columna, en este caso es la columna modelo
-			ps.setString(3, "Xtrail");
+			ps.setString(3, "Accent");
 			//seteamos la cuarta columna, en este caso es la columna anio
-			ps.setInt(4, 2026);
+			ps.setInt(4, 2018);
 			//seteamos la quinta columna, en este caso es la columna precio
-			ps.setDouble(5, 20000);
+			ps.setDouble(5, 25000);
 			//seteamos la sexta columna, en este caso es la columna color
-			ps.setString(6, "Negro");
+			ps.setString(6, "Azul");
 			//seteamos la septima columna, en este caso es la columna disponible
 			ps.setBoolean(7, true);
 			
@@ -51,7 +51,8 @@ public class InsertarVehiculo {
 			
 			int filas=ps.executeUpdate();
 			
-			log.info("conexion exitosa");
+			log.info("-----Vehiculo Agregado------");
+			
 			log.info("Filas insertadas: "+ filas);
 			
 		}catch(SQLException e) {
