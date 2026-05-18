@@ -56,6 +56,7 @@ public class InsertarVehiculo {
 			log.info("Filas insertadas: "+ filas);
 			
 		}catch(SQLException e) {
+			
 			log.error("error en la conexion: " + e.getMessage());
 			
 		}finally {
