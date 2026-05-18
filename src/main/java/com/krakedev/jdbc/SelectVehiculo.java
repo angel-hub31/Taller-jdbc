@@ -54,10 +54,18 @@ public class SelectVehiculo {
 
 		} finally {
 			try {
-				con.close();
+				if(rs !=null) {
+					rs.close();
+				}
+				if (ps !=null) {
+					ps.close();
+				}
+				if(con !=null) {
+					con.close();
+}
 			} catch (SQLException e) {
 				// TODO Auto-generated catch block
-				e.printStackTrace();
+				log.error("Error al cerrar los recursos: " + e.getMessage());
 			}
 		}
 
