@@ -21,7 +21,7 @@ public class UpdateVehiculo {
 			con=Conexion.getConnection();
 			//realizamos las actualizaciones
 			String sql="""
-					UPDATE Vehiculo SET marca=?,modelo=?,anio=?,precio=?,color=?,disponible=?
+					UPDATE Vehiculos SET marca=?,modelo=?,anio=?,precio=?,color=?,disponible=?
 					WHERE placa=?
 					""";
 			ps=con.prepareStatement(sql);
