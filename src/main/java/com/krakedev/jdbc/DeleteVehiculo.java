@@ -22,10 +22,10 @@ public class DeleteVehiculo {
 			ps=con.prepareStatement(sql);
 			
 			ps=con.prepareStatement(sql);
-			ps.setString(1, "PSG-123");
+			ps.setString(1, "PCI456");
 			
 			int filas=ps.executeUpdate();
-			
+			log.info("---Vehiculo Eliminado Exitoso---");
 			log.info("Filas eliminadas: " + filas);
 			
 			
